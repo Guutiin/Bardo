@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha: O Bardo</title>
+    <style>
+        /* Estilo Geral (Visual de Pergaminho) */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4e4bc;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fffbf0;
+            border: 1px solid #d4c5a3;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            padding: 40px;
+            border-radius: 5px;
+        }
+
+        /* Cabeçalho e Imagem */
+        header {
+            text-align: center;
+            border-bottom: 2px solid #8b0000;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            color: #663399; /* Roxo para Bardo */
+            margin: 10px 0 5px 0;
+            font-size: 2.5em;
+        }
+        .quote {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .char-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 4px solid #4a3b2a;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            margin-top: 10px;
+        }
+
+        /* Tabela de Atributos */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .stat-box {
+            background-color: #e8dcc5;
+            border: 1px solid #bba;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .stat-val {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2c3e50;
+            display: block;
+        }
+        .stat-label {
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Seções (Ataques, Habilidades) */
+        .section-title {
+            background-color: #4a3b2a;
+            color: #fff;
+            padding: 5px 15px;
+            font-size: 1.2em;
+            margin-top: 30px;
+            border-radius: 3px;
+        }
+        .attack-card {
+            background-color: #fff;
+            border-left: 5px solid #9b59b6; /* Roxo Claro */
+            padding: 10px 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .ability-card {
+            background-color: #fff;
+            border-left: 5px solid #e74c3c; /* Vermelho para Racial/Combate */
+            padding: 10px 15px;
+            margin: 10px 0;
+        }
+        .magic-card {
+            background-color: #fcf3cf;
+            border-left: 5px solid #8e44ad; /* Roxo Escuro para Magia */
+            padding: 10px 15px;
+            margin: 10px 0;
+        }
+        strong { color: #8b0000; }
+        
+        /* Rodapé de Impressão */
+        @media print {
+            body { background-color: white; }
+            .container { box-shadow: none; border: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <img src="Bardo.png" alt="O Bardo Tiefling" class="char-img">
+        
+        <h1>O Bardo</h1>
+        <div class="quote">"Uma espada pode ferir o corpo, mas uma boa fofoca destrói a alma. Vamos cantar?"</div>
+        <p><strong>Raça:</strong> Tiefling | <strong>Estilo:</strong> Magia Psíquica e Suporte</p>
+    </header>
+
+    <div class="stats-grid">
+        <div class="stat-box">
+            <span class="stat-label">Vida (PV)</span>
+            <span class="stat-val" style="color: #c0392b;">20</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Defesa</span>
+            <span class="stat-val" style="color: #2980b9;">13</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Mente</span>
+            <span class="stat-val">+4</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Destreza</span>
+            <span class="stat-val">+2</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Constituição</span>
+            <span class="stat-val">+1</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Força</span>
+            <span class="stat-val">-1</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Presença</span>
+            <span class="stat-val">+3</span>
+        </div>
+    </div>
+
+    <h2 class="section-title">⚔️ Ataque Físico</h2>
+    <div class="attack-card">
+        <h3>🗡️ Rapieira (Finesse)</h3>
+        <p>Uma espada fina e elegante. Você usa sua agilidade.</p>
+        <p><strong>Acerto:</strong> 1d20 + 2 <br> <strong>Dano:</strong> 1d8 + 2 (Perfurante)</p>
+    </div>
+
+    <h2 class="section-title">✨ Magias & Poderes</h2>
+
+    <div class="magic-card">
+        <h3>🎶 Inspiração de Bardo (3x ao Dia)</h3>
+        <p>Use uma ação bônus para tocar uma nota heroica. Um aliado ganha um dado <strong>(1d6)</strong> extra para somar em qualquer ataque ou teste que ele fizer depois.</p>
+    </div>
+
+    <div class="magic-card">
+        <h3>👁️ Sussurros Dissonantes (Magia Poderosa)</h3>
+        <p>Você sussurra uma melodia quebrada na mente do inimigo. Ele sente uma dor terrível e foge de medo.</p>
+        <p><strong>Dano:</strong> 3d6 (Psíquico) <br> <strong>Efeito:</strong> O inimigo deve usar a reação dele para correr para longe de você.</p>
+    </div>
+
+    <div class="magic-card">
+        <h3>🤬 Zombaria Viciosa (Truque - Infinito)</h3>
+        <p>Você insulta o inimigo magicamente. Se ele falhar na resistência, toma <strong>1d4 de dano</strong> e tem desvantagem no próximo ataque (porque ficou triste com o xingamento).</p>
+    </div>
+
+    <h2 class="section-title">🔥 Legado Infernal (Tiefling)</h2>
+    
+    <div class="ability-card">
+        <h3>Resistência ao Fogo</h3>
+        <p>Você recebe apenas metade do dano de qualquer ataque de fogo.</p>
+    </div>
+
+    <div class="ability-card">
+        <h3>😡 Repreensão Infernal (Reação - 1x ao Dia)</h3>
+        <p>Quando alguém te acerta um ataque, você pode, instantaneamente, apontar o dedo e explodir o atacante com chamas infernais.</p>
+        <p><strong>Dano:</strong> 2d10 (Fogo)!</p>
+    </div>
+
+    <h2 class="section-title">🎒 Equipamento</h2>
+    <ul>
+        <li>Alaúde (Instrumento Musical)</li>
+        <li>Roupas de Viajante (Estilosas)</li>
+        <li>Rapieira</li>
+        <li>Um diário de canções não terminadas</li>
+    </ul>
+
+</div>
+
+</body>
+</html>
